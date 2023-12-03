@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+
+        }
+        .header{
+            min-height: 100vh;
+            width: 100;
+            background-image: url(Grey\ Modern\ Professional\ Business\ Project\ Presentation.png); 
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        nav img{
+            width: 100px;
+
+        }
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color:white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .nav-links ul li ::after{
+            content: '';
+            width: 0%;
+            height: 3px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.8s;
+        }
+        .nav-links ul li :hover::after{
+            width: 100%;
+        }
+        .text-box{
+            width: 90%;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            margin-left: 60px;
+        }
+        .hero-btn{
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(7, 7, 7);
+            border: 2px solid #020202;
+            border-radius: 5px;
+            margin-top: 30px;
+            padding: 8px;
+            font-size: 13px;
+            background-color: transparent;
+            position: relative;
+            cursor:pointer;
+        }
+        .hero-btn:hover{
+            border: 2px solid rgba(51, 16, 177, 0.199);
+            color: white;
+            background:#f44336;
+            transition: 0.8s;
+        }
+        .services{
+            width:80%;
+            margin: auto;
+            text-align:center ;
+            padding-top: 100px;
+            background-color: rgb(255, 255, 255);
+        }
+        h1{
+            font-size: 40px;
+            font-weight: 600;
+        }
+        p{
+            color: rgb(3, 3, 3);
+            font-size: 19px;
+            font-weight: 300;
+            line-height: 22px;
+            padding-top: 20px;
+        }
+        .row{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .course-col{
+            flex-basis: 31%;
+            background: #dbd1d1;
+            border-radius: 15px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+        }
+        .course-col:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+            transition: 0.8s;
+        }
+        .campus{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .campus-col{
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow:hidden;            
+        }
+        .campus-col img{
+            height: 400px;
+            display: block;
+            
+        }
+        .layer{
+            background:transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
+            transition: 0.8s;
+        }
+        .layer:hover{
+            background: rgba(247, 8, 8, 0.582);
+            color: white;
+            
+        }
+        .layer h3{
+            width: 100%;
+            font-weight: 500;
+            color:#fff;
+            font-size: 30px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.7s;
+        }
+        .layer:hover h3{
+            bottom: 49%;
+            opacity: 1;
+
+        }
+        .facilities{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .facilities-col{
+            flex-basis: 31%;
+            border-radius: 10px;
+            margin-bottom: 7%;
+            text-align:center;
+        }
+        .facilities-col img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .facilities-col p{
+            padding: 0;
+            opacity: 0.3;
+        }
+        .facilities-col p:hover{
+            opacity: 1;
+            transition: 0.5s;
+        }
+        .facilities-col h3{
+            margin-top: 16px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        /*------testimonials------*/
+        .testimonials{
+            width: 80%;
+            margin: auto;
+            padding-top: 100px;
+            text-align: center;
+        }
+        .testimonial-col{
+            flex-basis: 44%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+            background: #c5baba9c;
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+
+        }
+        .testimonial-col img{
+            height: 60px;
+            margin-left: 5px;
+            margin-right: 30px;
+            border-radius: 50%;
+
+        }
+        .testimonial-col p{
+            padding: 0;
+        }
+        .testimonial-col h3{
+            margin-top: 15px;
+            text-align: left;
+        }
+        .cta{
+            margin: 100px auto;
+            width:80%;
+            background-image:url(bhbh.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            text-align: center;
+            padding:100px 0;
+        }
+        .cta h1{
+            color: white;
+            margin-bottom:40px ;
+            padding: 0;
+        }
+        .hero-btn1{
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(252, 245, 245);
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            margin-top: 30px;
+            padding: 8px;
+            font-size: 18px;
+            background-color: transparent;
+            position: relative;
+            cursor:pointer;
+        }
+        .hero-btn1:hover{
+            border: 2px solid rgba(51, 16, 177, 0.199);
+            color: white;
+            background:#f44336;
+            transition: 0.8s;
+        }
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+        .footer h3{
+            margin-bottom: 25px;
+            margin-top:20px ;
+            font-weight: 600;
+
+        }
+        .icons {
+            color: rgb(179, 20, 20);
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+
+        }
+        .star{
+            color: black;
+            size: 5px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="careomatic.html"><img src="logoofdog.jpg"style="border-radius:50%"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="careomatic.html">HOME</a></li>
+                    <li><a href="about us.html" target="_blank">ABOUT</a></li>
+                    <li><a href="services.html">SERVICE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    <div class="text-box">
+        <h1 style="font-size: 100px;">CareOmatic</h1>
+        <p style="font-size:20px">“Don't worry, every dog has its day. You'll get your chance to shine.”<br> “The underdog team won the championship. Every dog has its day.”</p>
+        <br>
+        <a href="about us.html" class="hero-btn">Visit Us To Know More</a>
+    </div>
+    </section>
+    <!-- course -->
+    <section class="services">
+        <h1>
+            Services That We Offer are For
+        </h1><br>
+        <p>" Providing pet sitting services means filling in for the owner in his or her absence for the following tasks: Feeding and watering animals. Playing with them and keeping them company. Walking the dogs."</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Cats</h3><br>
+                <p>
+                    “Cats know how to obtain food without labor, shelter without confinement, and love without penalties.”
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Dogs</h3><br>
+                <p>
+                    “As wonderful as dogs can be, they are famous for missing the point.”
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Rabbits</h3><br>
+                <p>
+                    "Bunnies will always have a special place in my heart. They are often discredited as being good pets because they don't 'do anything'—ask any rabbit owner and watch how they laugh!"
+                    
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <section class="campus">
+          <h2>Value of our Coustmers</h2>
+          <p>We are thrilled to know that you enjoyed our Petsitting service. Your feedback motivates us to continue providing exceptional service to all our customers. Your feedback made our day! We are ecstatic to hear that you had a great time at CareOmatic.</p>
+          <div class="row">
+            <div class="campus-col">
+                <img src="cat1.jpg"> 
+                <div class="layer">
+                    <h3>Siddhant Patel</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="komal.png"> 
+                <div class="layer">
+                    <h3>Prince</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="rabbit.jpg"> 
+                <div class="layer">
+                    <h3>Abhinav</h3>
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p>
+            Oral Care
+            Veterinary Care
+            Dietary Supplements
+            Pet Grooming
+            Pet Fassion Products
+        </p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="treat1.jpg"style="height: 300px;">
+                <h3>World Class Veterinarians</h3>
+                <p>
+                    "Veterinarians are compassionate professionals dedicated to animal health. Through expertise and care, they diagnose, treat, and prevent illnesses, promoting the well-being and longevity of beloved pets in their care."</p>
+            </div>
+            <div class="facilities-col">
+                <img src="product.jpg"style="height: 300px;">
+                <h3>Certified and Quality Products</h3>
+                <p>"Top-tier pet products deliver comfort, durability, and safety, catering to diverse needs. From cozy beds to premium nutrition, these items enhance pets' lives, ensuring happiness, health, and long-lasting companionship."</p>
+            </div>
+            <div class="facilities-col">
+                <img src="grooming.jpg" style="height: 300px;">
+                <h3>Tier Top Grooming Facilities</h3>
+                <p>
+                    "Exceptional pet grooming facilities offer expert care, using top-notch tools and gentle techniques. Skilled groomers provide tailored services, ensuring pets' comfort, cleanliness, and a pampered experience, leaving them refreshed and revitalized."
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <section class="testimonials">
+        <h1>Your Opinion Matters to Us</h1>
+        <p>Here are some of the reviews form our past Coustmers</p>
+
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="messi.jpg">
+                <div>
+                    <p>
+                    "Exceptional dog care! The facility provides a safe, clean environment with dedicated staff who offer personalized attention. From nutritious meals to stimulating activities, my dog thrived. 
+                    </p>
+                    <h3>Lionel Andres Messi</h3>
+                    <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="cheeku.jpg">
+                <div>
+                    <p>
+                        "Outstanding cat care! The facility exudes comfort and security, offering a tranquil setting with attentive staff. My cat received exceptional treatment - from specialized diets to engaging play sessions, ensuring both physical and mental well-being. 
+                    </p>
+                    <h3>Virat Kohli</h3>
+                    <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="david.jpg">
+                <div>
+                    <p>
+                        "Fantastic rabbit care! The facility provides a nurturing environment with knowledgeable caretakers who understand rabbit needs. My pet received specialized diets, spacious living quarters, and stimulating activities that catered to its specific requirements. 
+                    </p>
+                    <h3>David Beckham</h3>
+                    <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <!-- call to action -->
+    <section class="cta">
+           <h1>Activate Us to enjoy our<br> services Anywhere from the World</h1>
+           <a href="contact.html"class="hero-btn1" target="_blank">CONTACT US</a>
+    </section>
+    
+
+    <section class="footer">
+        <h3>About Us</h3>
+        <p>"At our pet care center, we're dedicated to enriching the lives of your furry companions. <br>With a team of passionate experts, we provide exceptional care, tailored to meet the unique needs of every pet.<br> From grooming to health check-ups, our commitment is to ensure your beloved animals receive the utmost attention,<br> love, and support they deserve for a vibrant and joyful life."</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>Made By Siddhant <i class="fa-brands fa-instagram"></i> &  Prince <i class="fa-brands fa-instagram"></i></p>
+    </section>
+</body>
+</html>

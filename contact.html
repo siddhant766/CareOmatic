@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+
+        }
+        .header{
+            min-height: 100vh;
+            width: 100;
+            background-image: url(abop.png); 
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        nav img{
+            width: 100px;
+
+        }
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color:rgb(3, 3, 3);
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .nav-links ul li ::after{
+            content: '';
+            width: 0%;
+            height: 3px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.8s;
+        }
+        .nav-links ul li :hover::after{
+            width: 100%;
+        }
+        .text-box{
+            width: 90%;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            text-align:end;
+        }
+        .hero-btn{
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(7, 7, 7);
+            border: 2px solid #020202;
+            border-radius: 5px;
+            margin-top: 30px;
+            padding: 8px;
+            font-size: 13px;
+            background-color: transparent;
+            position: relative;
+            cursor:pointer;
+        }
+        .hero-btn:hover{
+            border: 2px solid rgba(51, 16, 177, 0.199);
+            color: white;
+            background:#f44336;
+            transition: 0.8s;
+        }
+        
+        h1{
+            font-size: 40px;
+            font-weight: 600;
+        }
+        p{
+            color: rgb(3, 3, 3);
+            font-size: 19px;
+            font-weight: 300;
+            line-height: 22px;
+            padding-top: 20px;
+        }
+        .row{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .hero-btn1{
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(22, 21, 21);
+            border: 2px solid #13111141;
+            border-radius: 5px;
+            margin-top: 30px;
+            padding: 8px;
+            font-size: 18px;
+            background-color: transparent;
+            position: relative;
+            cursor:pointer;
+            
+        }
+        .hero-btn1:hover{
+            border: 2px solid rgba(51, 16, 177, 0.199);
+            color: white;
+            background:#f44336;
+            transition: 0.8s;
+        }
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+        .footer h3{
+            margin-bottom: 25px;
+            margin-top:20px ;
+            font-weight: 600;
+
+        }
+        .icons {
+            color: rgb(179, 20, 20);
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+
+        }
+        .star{
+            color: black;
+            size: 5px;
+        }
+       /*contact us page*/
+       .location{
+            width: 1000px;
+            margin: auto;
+            padding: 80px 0;
+       }
+        .location iframe{
+            width: 100%;
+        }
+        .contact-us{
+            width: 80%;
+            margin: auto;
+        }
+        .contact-col{
+            flex-basis: 48%;
+            margin-bottom: 30px;
+        }
+        .contact-col div{
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .contact-col div fa{
+            font-size:28px;
+            color: #f44336;
+            margin-right: 30px;
+        }
+        .contact-col div p{
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 400;
+        }
+        .contact-col input ,.contact-col textarea{
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 17px;
+            outline: none;
+            border: 1px solid #1110104b;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="careomatic.html"><img src="logoofdog.jpg"style="border-radius:50%"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="careomatic.html">HOME</a></li>
+                    <li><a href="about us.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1 style="font-size: 100px;">Contact Us</h1>
+            <p style="font-size:20px">“Don't worry, every dog has its day. You'll get your chance to shine.”<br> “The underdog team won the championship. Every dog has its day.”</p>
+            <br>
+            <!-- <a href="" class="hero-btn">Visit Us To Know More</a> -->
+        </div>
+    </section>
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109143.25080072314!2d75.64845235470122!3d31.255991352601754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5f5e9c489cf3%3A0x4049a5409d53c300!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1701365850045!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Lovely Professional University , Phagwara</h5>
+                        <p>Punjab</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+91 766 8999 653</h5>
+                        <p>Monday to Saturday , 10AM to 6PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>
+                        <h5>Siddhantpatel766@gmai.com</h5>
+                        <p>email</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col" style="border: 1px solid black;padding:10px;">
+                <form action="">
+                    <input type="text" placeholder="enter your name" required>
+                    <input type="email" placeholder="enter your email" required>
+                    <input type="text" placeholder="pet category" required>
+                    <input type="text" placeholder="pet breed" required>
+                    <textarea rows="8"></textarea>
+                    <button type="submit" class="hero-btn1" >Send Request</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+  
+    
+
+    <section class="footer">
+        <h3>About Us</h3>
+        <p>"At our pet care center, we're dedicated to enriching the lives of your furry companions. <br>With a team of passionate experts, we provide exceptional care, tailored to meet the unique needs of every pet.<br> From grooming to health check-ups, our commitment is to ensure your beloved animals receive the utmost attention,<br> love, and support they deserve for a vibrant and joyful life."</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>Made By Siddhant <i class="fa-brands fa-instagram"></i> &  Prince <i class="fa-brands fa-instagram"></i></p>
+    </section>
+</body>
+</html>
